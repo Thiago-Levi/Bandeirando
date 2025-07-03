@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Bandeirando</string>
+    <string name="brasil_nome">Brasil</string>
+    <string name="brasil_continente">América</string>
+    <string name="brasil_capital">Brasília</string>
+    <string name="brasil_area">8.515.770</string>
+    <string name="brasil_populacao">210.306.415</string>
+
+    <string name="colombia_nome">Colômbia</string>
+    <string name="colombia_continente">América</string>
+    <string name="colombia_capital">Bogotá</string>
+    <string name="colombia_area">1.140.619,050</string>
+    <string name="colombia_populacao">50.629.997</string>
+
+    <string name="japao_nome">Japão</string>
+    <string name="japao_continente">Asia</string>
+    <string name="japao_capital">Tóqui</string>
+    <string name="japao_area">377.974,000</string>
+    <string name="japao_populacao">126.261.000</string>
+
+    <string name="estonia_nome">Estônia</string>
+    <string name="estonia_continente">Europa</string>
+    <string name="estonia_capital">Taline</string>
+    <string name="estonia_area">45.340</string>
+    <string name="estonia_populacao">1.329.522</string>
+
+</resources>
