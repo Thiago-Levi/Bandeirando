@@ -1,6 +1,5 @@
 package com.example.bandeirando.views
 
-import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -13,11 +12,14 @@ import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -31,6 +33,13 @@ import androidx.compose.ui.unit.sp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FlagScreenApp() {
+    var flagName by remember { mutableIntStateOf(com.example.bandeirando.R.string.brasil_nome) }
+    var flagImage by remember { mutableIntStateOf(com.example.bandeirando.R.drawable.brasil) }
+    var continent by remember { mutableIntStateOf(com.example.bandeirando.R.string.brasil_continente) }
+    var capital by remember { mutableIntStateOf(com.example.bandeirando.R.string.brasil_capital) }
+    var area by remember { mutableIntStateOf(com.example.bandeirando.R.string.brasil_area) }
+    var population by remember { mutableIntStateOf(com.example.bandeirando.R.string.brasil_populacao) }
+
     Scaffold(topBar = {
         CenterAlignedTopAppBar(
             title = { Text(text = "Bandeirando Wiki") }
@@ -46,12 +55,12 @@ fun FlagScreenApp() {
                 .background(color = colorResource(id = com.example.bandeirando.R.color.background))
         ) {
             FlagAndInfos(
-                flagName = com.example.bandeirando.R.string.japao_nome,
-                flagImage = com.example.bandeirando.R.drawable.japao,
-                continent = com.example.bandeirando.R.string.japao_continente,
-                capital = com.example.bandeirando.R.string.japao_capital,
-                area = com.example.bandeirando.R.string.japao_area,
-                population = com.example.bandeirando.R.string.japao_populacao
+                flagName = flagName,
+                flagImage = flagImage,
+                continent = continent,
+                capital = capital,
+                area = area,
+                population = population
 
             )
         }
